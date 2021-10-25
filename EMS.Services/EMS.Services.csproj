@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="LinqKit" Version="1.1.26" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EMS.DataAcess\EMS.DataAcess.csproj" />
     <ProjectReference Include="..\EMS.Entity\EMS.Entity.csproj" />
     <ProjectReference Include="..\EMS.Infrastructure\EMS.Infrastructure.csproj" />

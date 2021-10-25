@@ -22,7 +22,7 @@ namespace EMS.Entity.BaseModel
         public Int64 LatestUpdateUserID { get; set; }
 
         public Guid UserID { get; set; }
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
     }
 }
 

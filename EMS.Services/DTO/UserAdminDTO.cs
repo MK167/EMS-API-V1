@@ -10,32 +10,25 @@ namespace EMS.Services.DTO
         public Guid UserAdminID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string UserJobNumber { get; set; }
-
-        [StringLength(250)]
-        public string FullName { get; set; }
-
-        [StringLength(250)]
-        public string FirstName { get; set; }
-
-        [StringLength(250)]
-        public string LastName { get; set; }
-
-        [StringLength(550)]
-        public string Email { get; set; }
+        public String UserJobNumber { get; set; }
+        
+        public String FullName { get; set; }
+        
+        public String FirstName { get; set; }
+        
+        public String LastName { get; set; }
+        
+        public String Email { get; set; }
 
         public bool IsAdmin { get; set; } = false;
 
         public Guid JobID { get; set; }
 
-        [StringLength(250)]
-        public string JobName { get; set; }
+        public String JobName { get; set; }
 
         public Guid ImgPathID { get; set; }
-
-        [StringLength(900)]
-        public string ImgPathName { get; set; }
+        
+        public String ImgPathName { get; set; }
 
 
     }

@@ -10,7 +10,7 @@ namespace EMS.Services.DTO
         public Guid EventVenueID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string EventVenueName { get; set; }
+        
+        public String EventVenueName { get; set; }
     }
 }

@@ -62,8 +62,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(350);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -93,8 +92,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("OrganizerID");
 
@@ -128,8 +126,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(350);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -151,8 +148,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -174,8 +170,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -197,8 +192,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -220,8 +214,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -243,8 +236,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -266,8 +258,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(450);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 
@@ -283,14 +274,11 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<DateTime>("ActionDate");
 
-                    b.Property<string>("Email")
-                        .HasMaxLength(550);
+                    b.Property<string>("Email");
 
-                    b.Property<string>("FirstName")
-                        .HasMaxLength(250);
+                    b.Property<string>("FirstName");
 
-                    b.Property<string>("FullName")
-                        .HasMaxLength(250);
+                    b.Property<string>("FullName");
 
                     b.Property<Guid>("ImgPathID");
 
@@ -300,8 +288,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<Guid>("JobID");
 
-                    b.Property<string>("LastName")
-                        .HasMaxLength(250);
+                    b.Property<string>("LastName");
 
                     b.Property<DateTime>("LatestUpdate");
 
@@ -309,8 +296,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<Guid>("UserID");
 
-                    b.Property<string>("UserJobNumber")
-                        .HasMaxLength(250);
+                    b.Property<string>("UserJobNumber");
 
                     b.HasKey("ID");
 
@@ -328,17 +314,13 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<DateTime>("ActionDate");
 
-                    b.Property<string>("Address")
-                        .HasMaxLength(550);
+                    b.Property<string>("Address");
 
-                    b.Property<string>("Email")
-                        .HasMaxLength(550);
+                    b.Property<string>("Email");
 
-                    b.Property<string>("FirstName")
-                        .HasMaxLength(250);
+                    b.Property<string>("FirstName");
 
-                    b.Property<string>("FullName")
-                        .HasMaxLength(550);
+                    b.Property<string>("FullName");
 
                     b.Property<Guid>("GenderID");
 
@@ -346,8 +328,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<bool>("IsVIP");
 
-                    b.Property<string>("LastName")
-                        .HasMaxLength(250);
+                    b.Property<string>("LastName");
 
                     b.Property<DateTime>("LatestUpdate");
 
@@ -355,8 +336,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<Guid>("NationalityID");
 
-                    b.Property<string>("Title")
-                        .HasMaxLength(300);
+                    b.Property<string>("Title");
 
                     b.Property<Guid>("UniversityID");
 
@@ -384,8 +364,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<DateTime>("ActionDate");
 
-                    b.Property<string>("ImgPath")
-                        .HasMaxLength(900);
+                    b.Property<string>("ImgPath");
 
                     b.Property<bool>("IsDeleted");
 
@@ -413,8 +392,7 @@ namespace EMS.DataAcess.Migrations
 
                     b.Property<long>("LatestUpdateUserID");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(250);
+                    b.Property<string>("Name");
 
                     b.Property<Guid>("UserID");
 

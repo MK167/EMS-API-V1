@@ -9,20 +9,19 @@ namespace EMS.Entity
 {
     public class UserAdminEntity : Base
     {
-        [StringLength(250)]
-        public string UserJobNumber { get; set; }
+        
+        public String UserJobNumber { get; set; }
 
-        [StringLength(250)]
-        public string FullName { get; set; }
+        
+        public String FullName { get; set; }
 
-        [StringLength(250)]
-        public string FirstName { get; set; }
+        
+        public String FirstName { get; set; }
 
-        [StringLength(250)]
-        public string LastName { get; set; }
+        
+        public String LastName { get; set; }
 
-        [StringLength(550)]
-        public string Email { get; set; }
+        public String Email { get; set; }
 
         public bool IsAdmin { get; set; } = false;
 

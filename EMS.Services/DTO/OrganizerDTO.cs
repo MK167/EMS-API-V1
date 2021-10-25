@@ -10,7 +10,7 @@ namespace EMS.Services.DTO
         public Guid OrganizerID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string OrganizerName { get; set; }
+        
+        public String OrganizerName { get; set; }
     }
 }

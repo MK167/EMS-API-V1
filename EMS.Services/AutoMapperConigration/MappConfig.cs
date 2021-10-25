@@ -31,6 +31,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<UserTypeDTO, UserTypeEntity>()
             .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.UserTypeID))
+            .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.UserTypeName))
             .ReverseMap();
         }
 
@@ -38,6 +39,8 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<UserImageDTO, UserImageEntity>()
             .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.UserImageID))
+            .ForMember(dest => dest.ImgPath, opt => opt.MapFrom(src => src.ImgPathName))
+
             .ReverseMap();
         }
 
@@ -50,7 +53,6 @@ namespace EMS.Services.AutoMapperConigration
             .ForMember(dest => dest.UserTypeName, opt => opt.MapFrom(src => src.UserType == null ? "" : src.UserType.Name))
             .ForMember(dest => dest.NationalityName, opt => opt.MapFrom(src => src.Nationality == null ? "" : src.Nationality.Name))
             .ForMember(dest => dest.GenderName, opt => opt.MapFrom(src => src.Gender == null ? "" : src.Gender.Name));
-
 
         }
 
@@ -67,6 +69,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<UniversityDTO, UniversityEntity>()
                         .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.UniversityID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.UniversityName))
                         .ReverseMap();
         }
 
@@ -74,6 +77,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<OrganizerDTO, OrganizerEntity>()
                         .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.OrganizerID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.OrganizerName))
                         .ReverseMap();
         }
 
@@ -81,6 +85,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<NationalityDTO, NationalityEntity>()
                         .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.NationalityID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.NationalityName))
                         .ReverseMap();
         }
 
@@ -88,6 +93,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<JobDTO, JobEntity>()
                         .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.JobID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.jobName))
                         .ReverseMap();
         }
 
@@ -95,6 +101,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<GenderDTO, GenderEntity>()
                         .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.GenderID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.GenderName))
                         .ReverseMap();
         }
 
@@ -102,6 +109,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<EventVenueDTO, EventVenueEntity>()
                         .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.EventVenueID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.EventVenueName))
                         .ReverseMap();
         }
 
@@ -109,6 +117,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<EventStatusDTO, EventStatusEntity>()
                        .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.EventStatusID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.EventStatusName))
                        .ReverseMap();
         }
 
@@ -116,6 +125,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<EventDetailsDTO, EventDetailsEntity>()
                        .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.EventDetailsID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.EventDetailsName))
                        .ReverseMap()
                        .ForMember(dest => dest.OrganizerName, opt => opt.MapFrom(src => src.Organizer == null ? "" : src.Organizer.Name))
                        .ForMember(dest => dest.EventStatusName, opt => opt.MapFrom(src => src.EventStatus == null ? "" : src.EventStatus.Name))
@@ -127,6 +137,7 @@ namespace EMS.Services.AutoMapperConigration
         {
             CreateMap<EventCategoryDTO, EventCategoryEntity>()
                        .ForMember(dest => dest.ID, opt => opt.MapFrom(src => src.EventCategoryID))
+                        .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.EventCategoryName))
                        .ReverseMap();
         }
 
@@ -137,6 +148,6 @@ namespace EMS.Services.AutoMapperConigration
                        .ReverseMap()
                        .ForMember(dest => dest.EventDetailsName, opt => opt.MapFrom(src => src.EventDetails == null ? "" : src.EventDetails.Name))
                        .ForMember(dest => dest.UserAttendName, opt => opt.MapFrom(src => src.UserAttend == null ? "" : src.UserAttend.FullName));
-        }
+        }   
     }
 }

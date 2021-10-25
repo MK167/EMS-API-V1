@@ -13,13 +13,12 @@ namespace EMS.Services.DTO
 
 
         public Guid UserAttendID { get; set; }
-        [StringLength(250)]
-        public string UserAttendName { get; set; }
+        public String UserAttendName { get; set; }
 
 
         public Guid EventDetailsID { get; set; }
-        [StringLength(250)]
-        public string EventDetailsName { get; set; }
+        
+        public String EventDetailsName { get; set; }
 
 
     }

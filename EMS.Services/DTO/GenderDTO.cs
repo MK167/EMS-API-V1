@@ -10,7 +10,7 @@ namespace EMS.Services.DTO
         public Guid GenderID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string GenderName { get; set; }
+        
+        public String GenderName { get; set; }
     }
 }

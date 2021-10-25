@@ -10,48 +10,37 @@ namespace EMS.Services.DTO
         public Guid UserAttendID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(300)]
-        public string Title { get; set; }
+        public String Title { get; set; }
 
-        [StringLength(550)]
-        public string FullName { get; set; }
+        public String FullName { get; set; }
 
-        [StringLength(250)]
-        public string FirstName { get; set; }
+        public String FirstName { get; set; }
+        
+        public String LastName { get; set; }
 
-        [StringLength(250)]
-        public string LastName { get; set; }
-
-        [StringLength(550)]
-        public string Email { get; set; }
-
-        [StringLength(550)]
-        public string Address { get; set; }
+        public String Email { get; set; }
+        
+        public String Address { get; set; }
 
         public bool IsVIP { get; set; } = false;
 
 
-
         public Guid UniversityID { get; set; }
-        [StringLength(250)]
-        public string UniversityName { get; set; }
-
-
+        
+        public String UniversityName { get; set; }
 
         public Guid UserTypeID { get; set; }
-        [StringLength(250)]
-        public string UserTypeName { get; set; }
-
+        
+        public String UserTypeName { get; set; }
 
 
         public Guid NationalityID { get; set; }
-        [StringLength(250)]
-        public string NationalityName { get; set; }
-
+        
+        public String NationalityName { get; set; }
 
 
         public Guid GenderID { get; set; }
-        [StringLength(250)]
-        public string GenderName { get; set; }
+        
+        public String GenderName { get; set; }
     }
 }

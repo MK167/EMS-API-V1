@@ -10,7 +10,7 @@ namespace EMS.Services.DTO
         public Guid JobID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string jobName { get; set; }
+        
+        public String jobName { get; set; }
     }
 }

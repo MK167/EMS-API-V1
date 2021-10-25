@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EMS.DataAcess.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class IntialDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 350, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -34,7 +34,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 350, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,7 +51,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -68,7 +68,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -85,7 +85,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -102,7 +102,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -119,7 +119,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -136,7 +136,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 450, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -153,7 +153,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    ImgPath = table.Column<string>(maxLength: 900, nullable: true)
+                    ImgPath = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -170,7 +170,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -187,7 +187,7 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(maxLength: 250, nullable: true),
+                    Name = table.Column<string>(nullable: true),
                     StartDate = table.Column<DateTime>(nullable: false),
                     EndDate = table.Column<DateTime>(nullable: false),
                     OrganizerID = table.Column<Guid>(nullable: false),
@@ -234,11 +234,11 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    UserJobNumber = table.Column<string>(maxLength: 250, nullable: true),
-                    FullName = table.Column<string>(maxLength: 250, nullable: true),
-                    FirstName = table.Column<string>(maxLength: 250, nullable: true),
-                    LastName = table.Column<string>(maxLength: 250, nullable: true),
-                    Email = table.Column<string>(maxLength: 550, nullable: true),
+                    UserJobNumber = table.Column<string>(nullable: true),
+                    FullName = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
                     IsAdmin = table.Column<bool>(nullable: false),
                     JobID = table.Column<Guid>(nullable: false),
                     ImgPathID = table.Column<Guid>(nullable: false)
@@ -270,12 +270,12 @@ namespace EMS.DataAcess.Migrations
                     LatestUpdateUserID = table.Column<long>(nullable: false),
                     UserID = table.Column<Guid>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Title = table.Column<string>(maxLength: 300, nullable: true),
-                    FullName = table.Column<string>(maxLength: 550, nullable: true),
-                    FirstName = table.Column<string>(maxLength: 250, nullable: true),
-                    LastName = table.Column<string>(maxLength: 250, nullable: true),
-                    Email = table.Column<string>(maxLength: 550, nullable: true),
-                    Address = table.Column<string>(maxLength: 550, nullable: true),
+                    Title = table.Column<string>(nullable: true),
+                    FullName = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
+                    Address = table.Column<string>(nullable: true),
                     IsVIP = table.Column<bool>(nullable: false),
                     UniversityID = table.Column<Guid>(nullable: false),
                     UserTypeID = table.Column<Guid>(nullable: false),

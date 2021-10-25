@@ -8,9 +8,9 @@ namespace EMS.Entity
 {
     public class OrganizerEntity : Base
     {
-        [StringLength(250)]
+        
 
-        public string Name { get; set; }
+        public String Name { get; set; }
 
         public virtual ICollection<EventDetailsEntity> EventDetails { get; set; }
 

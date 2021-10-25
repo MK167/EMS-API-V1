@@ -9,9 +9,9 @@ namespace EMS.Entity
 {
     public class EventDetailsEntity : Base
     {
-        [StringLength(250)]
+        
 
-        public string Name { get; set; }
+        public String Name { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }

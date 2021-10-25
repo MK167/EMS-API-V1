@@ -10,7 +10,6 @@ namespace EMS.Services.DTO
         public Guid UserTypeID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string UserTypeName { get; set; }
+        public String UserTypeName { get; set; }
     }
 }

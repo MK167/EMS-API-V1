@@ -8,9 +8,9 @@ namespace EMS.Entity
 {
     public class UniversityEntity : Base
     {
-        [StringLength(450)]
+        
 
-        public string Name { get; set; }
+        public String Name { get; set; }
 
         public virtual ICollection<UserAttendEntity> UserAttends { get; set; }
 

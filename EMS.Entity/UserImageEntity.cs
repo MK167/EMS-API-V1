@@ -9,8 +9,8 @@ namespace EMS.Entity
     public class UserImageEntity : Base
     {
 
-        [StringLength(900)]
-        public string ImgPath { get; set; }
+        
+        public String ImgPath { get; set; }
 
         public virtual ICollection<UserAdminEntity> UserAdmins { get; set; }
 

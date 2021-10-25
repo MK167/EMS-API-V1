@@ -10,7 +10,7 @@ namespace EMS.Services.DTO
         public Guid UniversityID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        [StringLength(250)]
-        public string UniversityName { get; set; }
+        
+        public String UniversityName { get; set; }
     }
 }

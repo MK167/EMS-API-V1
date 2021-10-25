@@ -8,9 +8,8 @@ namespace EMS.Entity
 {
     public class NationalityEntity : Base
     {
-        [StringLength(250)]
 
-        public string Name { get; set; }
+        public String Name { get; set; }
 
         public virtual ICollection<UserAttendEntity> UserAttends { get; set; }
 
