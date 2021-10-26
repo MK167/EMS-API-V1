@@ -4,6 +4,7 @@ using EMS.Entity;
 using EMS.Services.DTO;
 using EMS.Services.Interfaces;
 using EMS.Services.Services.Base;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -37,14 +38,23 @@ namespace EMS.Services.Services
 
         public IEnumerable<EventDetailsDTO> GetAllEventDetailss()
         {
-            var Entity = _unitofWork.EventDetailsRepository.Find(c => c.IsDeleted == false);
+            var Entity = _unitofWork.EventDetailsRepository.Find(c => c.IsDeleted == false, include: source => source
+          .Include(i => i.Organizer)
+          .Include(k => k.EventStatus)
+          .Include(k => k.EventVenue)
+          .Include(k => k.EventCategory));
+
             var EntityList = _mapper.Map<IEnumerable<EventDetailsDTO>>(Entity);
             return EntityList;
         }
 
         public EventDetailsDTO GetEventDetailsByID(Guid ID)
         {
-            var Entity = _unitofWork.EventDetailsRepository.FirstOrDefult(x => x.ID == ID);
+            var Entity = _unitofWork.EventDetailsRepository.FirstOrDefult(x => x.ID == ID, include: source => source
+          .Include(i => i.Organizer)
+          .Include(k => k.EventStatus)
+          .Include(k => k.EventVenue)
+          .Include(k => k.EventCategory));
             return _mapper.Map<EventDetailsDTO>(Entity);
         }
 

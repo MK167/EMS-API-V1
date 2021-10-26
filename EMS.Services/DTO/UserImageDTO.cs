@@ -10,7 +10,6 @@ namespace EMS.Services.DTO
         public Guid UserImageID { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-        
         public String ImgPathName { get; set; }
     }
 }

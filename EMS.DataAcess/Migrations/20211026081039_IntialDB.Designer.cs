@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EMS.DataAcess.Migrations
 {
     [DbContext(typeof(EMSContext))]
-    [Migration("20211025233927_IntialDB")]
+    [Migration("20211026081039_IntialDB")]
     partial class IntialDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

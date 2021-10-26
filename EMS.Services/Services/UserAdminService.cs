@@ -4,6 +4,7 @@ using EMS.Entity;
 using EMS.Services.DTO;
 using EMS.Services.Interfaces;
 using EMS.Services.Services.Base;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,14 +39,20 @@ namespace EMS.Services.Services
 
         public IEnumerable<UserAdminDTO> GetAllUserAdmins()
         {
-            var Entity = _unitofWork.UserAdminRepository.Find(c => c.IsDeleted == false);
+            var Entity = _unitofWork.UserAdminRepository.Find(c => c.IsDeleted == false, include: source => source
+           .Include(i => i.Job)
+           .Include(k => k.UsrerImage));
+
             var EntityList = _mapper.Map<IEnumerable<UserAdminDTO>>(Entity);
             return EntityList;
         }
 
         public UserAdminDTO GetUserAdminByID(Guid ID)
         {
-            var Entity = _unitofWork.UserAdminRepository.FirstOrDefult(x => x.ID == ID);
+            var Entity = _unitofWork.UserAdminRepository.FirstOrDefult(x => x.ID == ID, include: source => source
+          .Include(i => i.Job)
+          .Include(k => k.UsrerImage));
+
             return _mapper.Map<UserAdminDTO>(Entity);
         }
 

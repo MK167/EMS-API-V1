@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using EMS.DataAcess.UnitOfWork;
 using EMS.Entity;
 using EMS.Services.DTO;
@@ -38,14 +39,24 @@ namespace EMS.Services.Services
 
         public IEnumerable<UserAttendDTO> GetAllUserAttends()
         {
-            var Entity = _unitofWork.UserAttendRepository.Find(c => c.IsDeleted == false);
+            var Entity = _unitofWork.UserAttendRepository.Find(c => c.IsDeleted == false, include: source => source
+           .Include(i => i.University)
+           .Include(k => k.Nationality)
+           .Include(k => k.Gender)
+           .Include(k => k.UserType)
+            );
             var EntityList = _mapper.Map<IEnumerable<UserAttendDTO>>(Entity);
             return EntityList;
         }
 
         public UserAttendDTO GetUserAttendByID(Guid ID)
         {
-            var Entity = _unitofWork.UserAttendRepository.FirstOrDefult(x => x.ID == ID);
+            var Entity = _unitofWork.UserAttendRepository.FirstOrDefult(x => x.ID == ID, include : source => source
+            .Include(i => i.University)
+            .Include(k => k.Nationality)
+            .Include(k => k.Gender)
+            .Include(k => k.UserType)
+            );
             return _mapper.Map<UserAttendDTO>(Entity);
         }
 
